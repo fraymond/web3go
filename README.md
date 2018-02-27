@@ -80,45 +80,13 @@ personal.unlockAccount("0x18833df6ba69b4d50acc744e8294d128ed8db1f1")
 eth.sendTransaction({from: '0x18833df6ba69b4d50acc744e8294d128ed8db1f1', to: '0x2a022eb956d1962d867dcebd8fed6ae71ee4385a', value: web3.toWei(12, "ether")}) 
 ```
 
-## Usage
-
-```go
-import (
-	web3 "github.com/fraymond/web3go"
-	"github.com/fraymond/web3go/eth/block"
-	"github.com/fraymond/web3go/providers"
-	"fmt"
-)
-
-func test() {
-
-	web3Client := web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, true))
-	balance, err := web3Client.Eth.GetBalance("0x24fc5c1c97f838e57c944240fa2ffc18256bc415", block.LATEST)
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println(balance)
-
-}
+## Execution
+```bash
+go run web3main.go
 ```
-
-More tests in the 'tests' directory.
 
 ### Requirements
 
 * go ^1.8.3
 
 [Go installation instructions.](https://golang.org/doc/install)
-
-
-## Testing
-```bash
-go test -v test/*.go
-```
-
-## License
-
-Package web3go is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) License.
