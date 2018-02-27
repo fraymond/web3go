@@ -1,0 +1,6 @@
+language: go
+go:
+  - 1.8.x
+go_import_path: github.com/fraymond/web3go
+sudo: false
+script: go test test/*.go -v
