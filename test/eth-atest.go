@@ -13,32 +13,39 @@
 *********************************************************************************/
 
 /**
- * @file web3-blocknumber_test.go
+ * @file eth-coinbase_test.go
  * @authors:
  *   Raymond Fu <fraymond@gmail.com>
  * @date Feb 2018
  */
 
-package test
+ package test
 
-import (
-    "testing"
-
-	web3 "github.com/fraymond/web3go"
-	"github.com/fraymond/web3go/providers"
-)
-
-func TestEthBlockNumber(t *testing.T) {
-
-	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
-
-    blockNumber, err := connection.Eth.GetBlockNumber()
-
-	if err != nil {
-		t.Error(err)
-        t.Fail()
-	}
-
-	t.Log(blockNumber.ToInt64())
-
-}
+ import (
+	 "testing"
+ 
+	 web3 "github.com/fraymond/web3go"
+	 "github.com/fraymond/web3go/eth/block"
+	 "github.com/fraymond/web3go/providers"
+ )
+ 
+ func TestEthAtest(t *testing.T) {
+ 
+	 var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+ 
+	 coinbase, err := connection.Eth.GetCoinbase()
+ 
+	 if err != nil {
+		 t.Error(err)
+		 t.FailNow()
+	 }
+ 
+	 _, err = connection.Eth.GetBalance(coinbase, block.LATEST)
+ 
+	 if err != nil {
+		 t.Error(err)
+		 t.FailNow()
+	 }
+ 
+ }
+ 
