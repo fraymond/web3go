@@ -30,7 +30,7 @@ import (
 
 func TestEthGasPrice(t *testing.T) {
 
-	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:8545", 10, false))
 
 	gasPrice, err := connection.Eth.GetGasPrice()
 

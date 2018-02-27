@@ -30,7 +30,7 @@ import (
 
 func TestGetTransactionByHash(t *testing.T) {
 
-	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:8545", 10, false))
 
 	tx, err := connection.Eth.GetTransactionByHash("0x4cad48d861726a414e875d0f9395f9a6eeb7fb761108d521aee07017415256c9")
 

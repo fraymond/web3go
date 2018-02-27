@@ -30,7 +30,7 @@ import (
 
 func TestEthGetTransactionReceipt(t *testing.T) {
 
-	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:8545", 10, false))
 
 	tx, err := connection.Eth.GetTransactionReceipt("0xfd53f3ccf3fb55b0333862b804abc6765d1433141b5a860e978f67794861a79b")
 

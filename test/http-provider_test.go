@@ -29,7 +29,7 @@ import (
 
 func Test_HttpProvider(t *testing.T) {
 
-	var ethClient = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+	var ethClient = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:8545", 10, false))
 
 	var _, error = ethClient.ClientVersion()
 

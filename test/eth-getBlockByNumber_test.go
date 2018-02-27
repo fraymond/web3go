@@ -33,7 +33,7 @@ import (
 
 func TestEthGetBlockByNumber(t *testing.T) {
 
-	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:30305", 10, false))
+	var connection = web3.NewWeb3(providers.NewHTTPProvider("127.0.0.1:8545", 10, false))
 
 	//previous block Dec-09-2017 10:28:29 AM +UTC
 	//Dec-09-2017 10:28:31 AM +UTC should be block 4701754, hash 0xaec14e98d578351a23d5ab40f65ee431063f582b5d736bbc0705a2eef0fb8f9d

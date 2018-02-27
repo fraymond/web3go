@@ -60,7 +60,7 @@ Start geth and open a web3js console. You can use port 30305, which is default f
 
 ```
 geth --datadir ./privatebc init ./genesis.json
-geth --datadir ./privatebc --networkid 4321 --port 30305 console
+geth --datadir ./privatebc --networkid 4321 --port 30305 --rpc --rpcapi eth,net,web3,personal console
 ```
 
 Create new accounts and send transactions

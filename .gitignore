@@ -22,6 +22,9 @@ build/_vendor/pkg
 .project
 .settings
 
+# test file
+test/*
+
 # used by the Makefile
 /build/_workspace/
 /build/bin/

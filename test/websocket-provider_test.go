@@ -29,7 +29,7 @@ import (
 
 func Test_WebSocketProvider(t *testing.T) {
 
-	var ethClient = web3.NewWeb3(providers.NewWebSocketProvider("ws://127.0.0.1:30305"))
+	var ethClient = web3.NewWeb3(providers.NewWebSocketProvider("ws://127.0.0.1:8545"))
 
 	for index := 0; index < 100; index++ {
 
