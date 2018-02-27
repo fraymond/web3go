@@ -2,16 +2,10 @@
 
 This is a Ethereum compatible Go Client
 which implements the 
-[Eth JSON RPC Module](https://github.com/ethereum/wiki/wiki/JSON-RPC),
-[Personal JSON RPC Module](https://github.com/paritytech/parity/wiki/JSONRPC-personal-module) and
-[NET JSON RPC Module](https://github.com/paritytech/parity/wiki/JSONRPC-net-module#net_version).
-
-## Status
-
-This package is currently under active development. It is not already stable and the infrastructure is not complete and there are still several RPCs left to implement and the API is not stable yet.
+[Eth JSON RPC Module](https://github.com/ethereum/wiki/wiki/JSON-RPC). Similar to [Web3js](https://github.com/ethereum/web3.js/).
 
 
-## Installation
+## Web3go Installation
 
 ### go get
 
@@ -80,7 +74,7 @@ personal.unlockAccount("0x18833df6ba69b4d50acc744e8294d128ed8db1f1")
 eth.sendTransaction({from: '0x18833df6ba69b4d50acc744e8294d128ed8db1f1', to: '0x2a022eb956d1962d867dcebd8fed6ae71ee4385a', value: web3.toWei(12, "ether")}) 
 ```
 
-## Execution
+## Web3go Execution
 ```bash
 go run web3main.go
 ```
