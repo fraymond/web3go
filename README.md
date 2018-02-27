@@ -7,6 +7,12 @@ which implements the
 
 ## Web3go Installation
 
+### setup $GOPATH
+
+```
+export GOPATH=/Users/[user]/go
+```
+
 ### go get
 
 ```bash
